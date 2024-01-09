@@ -1,10 +1,10 @@
-# Fireflies-First-Month-Project
+# AnB-First-Month-Project
 
 ## 1. Introduction
 
 An awesome **static** NEWS website built to provide informations about **Cambodia Seagames 2023** and **ASEAN Para Games 2023**
 
-- **Live preview** [Fireflies First Month Project](https://anb-hq.github.io/Fireflies-First-Month-Project/)
+- **Live preview** [[AnB First Month Project](https://anb-hq.github.io/Fireflies-First-Month-Project/)](https://phirom-02.github.io/combodia-seagames-clone/)
 
 - **Website reference:** [cambodia2023](https://www.cambodia2023.com/)
 
