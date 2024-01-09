@@ -1,0 +1,547 @@
+/* =================================== MAIN PAGE ======================================== */
+/* css variable */
+:root {
+    --blue: #0d68b1;
+    --sat-blue: #0e68b1;
+    --red: #e63228;
+    --sat-purple: #762c5b;
+    --gray: #212529;
+    --dark-blue: #1a2141;
+}
+
+/* carousel banner */
+.carousel-container {
+    background: linear-gradient(0deg, rgba(242, 242, 242, .8) 0%, rgba(242, 242, 242, .4) 100%), url(../img/angkor-wat-temple.webp) no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 14em 10em 4em 10em;
+}
+
+.carousel-container i {
+    position: absolute;
+    top: 62%;
+    padding: 0.25em;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    background: #fff;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    transform: translateY(-50%);
+}
+
+.carousel-container i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.carousel-container i:first-child {
+    left: 130px;
+}
+
+.carousel-container i:last-child {
+    right: 130px;
+}
+
+.carousel-container .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 2);
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+/* hide scrollbar */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* js */
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .carousel-img {
+    cursor: grab;
+    user-select: none;
+}
+/* ================ */
+
+.carousel-img {
+    scroll-snap-align: start;
+}
+
+@media screen and (max-width: 1200px) {
+    .carousel-container {
+        margin-top: 2em;
+    }
+
+    .carousel-container .carousel {
+        grid-auto-columns: 100%;
+    }
+
+    .carousel-container i {
+        position: absolute;
+        top: 60%;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        text-align: center;
+        background: #fff;
+        color: var(--blue);
+        transform: translateY(-50%);
+    }
+
+    .carousel-container i:first-child {
+        left: 0px;
+    }
+
+    .carousel-container i:last-child {
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 997px) {
+    .carousel-container {
+        background: none;
+        padding: 6em 0 2em 0;
+    }
+
+    .carousel-container .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/* ============================== sponsor section ============================== */
+.top--sponsor-img {
+    height: 80px;
+}
+
+.bot--sponsor-img {
+    height: 70px;
+}
+
+.sponsor-item p {
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 0.5em;
+    opacity: 0.5;
+}
+
+.gap-32 {
+    gap: 2em;
+}
+
+.gap-40 {
+    gap: 2.5em;
+}
+
+.sponsors-section {
+    background-color: #fff;
+    padding: 2em 0;
+}
+
+.sponsors-container hr {
+    opacity: 0.5;
+}
+
+.top--sponsors-headline {
+    font-size: 1.25rem;
+    text-align: center;
+    color: var(--gray);
+    text-transform: uppercase;
+}
+
+.sponsors-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em 0;
+}
+
+/* ============================== quote section ============================== */
+.quote-section {
+    height: 512px;
+    background: url("../img/girl.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.quote-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.quote-card {
+    width: 80%;
+    padding: 2em;
+    background-color: rgba(230, 50, 40, 0.8);
+}
+
+.quote-card q {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0.9;
+    display: block;
+}
+
+.quote-card cite {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+    opacity: 0.9;
+    display: block;
+}
+
+/* =================================== NEWS ======================================== */
+
+.main-news {
+    margin-top: 6em;
+}
+
+img {
+    object-fit: cover;
+}
+
+.head-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    padding: 3rem;
+}
+
+/* =================================== BRANDS ======================================== */
+
+.section-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 3em 1.5em;
+}
+
+.logo-definition,
+.brand-mascot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.big--logo-img,
+.big--mascot-img {
+    border: 1px solid #d9d9d9;
+    border-radius: 0.5em;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big--logo-img img,
+.big--mascot-img img {
+    padding: 4em;
+    width: initial;
+    height: initial;
+}
+
+.big--mascot-img {
+    overflow: hidden;
+}
+
+.accent-img img {
+    width: initial;
+    height: initial;
+    margin-bottom: 1em;
+}
+
+.sports--live-in-peace {
+    background: linear-gradient(90deg, #fafafa 20.77%, hsla(0, 0%, 100%, 0) 50%), url(../img/brand-img/monk.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 0.5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.motto-img {
+    flex: 0 0 auto;
+    align-self: flex-start;
+}
+
+p {
+    font-size: 0.875rem;
+    color: #212529;
+    line-height: 1.5;
+    padding-bottom: 1em;
+}
+
+/* =================================== VISIT ======================================== */
+.angkor-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.official-hotel {
+    margin: 1em 0;
+}
+
+.banner-img img {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+}
+
+.banner-button {
+    position: absolute;
+    align-self: center;
+    bottom: 8em;
+    padding: 0.75em 6em;
+    font-size: 1.25em;
+    border: 0 solid white;
+    opacity: 0.9;
+    color: #0d68b1;
+}
+
+.table-container {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-radius: 0.8em;
+}
+
+.table-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow-x: scroll;
+    margin-bottom: 4em;
+    border-radius: 0.5em;
+}
+
+td,
+th {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    color: rgba(0, 0, 0, 0.87);
+    vertical-align: inherit;
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+
+    display: table-cell;
+    text-align: left;
+}
+
+tr th:nth-child(6) {
+    white-space: nowrap;
+}
+
+.table .table-caption th {
+    font-weight: 700;
+}
+
+.visit-table {
+    color: #696060;
+    gap: 1em;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* =================================== INFOMATION ======================================== */
+.info-card-flex>p {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.info-containers {
+    display: block;
+    padding: 10em 1.5em 3em 1.5em;
+    max-width: 1600px;
+    margin: 1em auto;
+}
+
+.info-container {
+    margin-bottom: 16px;
+    border-radius: 0.5em;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+        rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.folder-icon {
+    font-size: 4rem;
+    color: #0e68b1;
+}
+
+.info-card-flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+.card-border {
+    border-radius: 3px;
+    background-color: #f3f3f3;
+    padding: 1rem;
+    padding: 5px 15px;
+}
+
+/* =================================== SPONSORS ======================================== */
+.exclusive-premium-sponsors img {
+    height: 80px;
+}
+
+.premium-sponsors img {
+    height: 70px;
+}
+
+.national-partners img {
+    height: 33px;
+}
+
+.sponsors-container {
+    margin-top: 8em;
+}
+
+.exclusive-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.flex-exclusive-sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.premium-title {
+    text-align: center;
+    margin: 1em;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.flex-premium-sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+}
+
+.national-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.flex-national-partner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+}
+
+hr {
+    color: #e0e0e0;
+    margin-top: 1em;
+    opacity: 0.5;
+}
+
+/* =================================== MEDIA QUERY ======================================== */
+@media screen and (min-width: 576px) {
+    .quote-card {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .quote-card {
+        width: 50%;
+    }
+
+    .sports--live-in-peace {
+        background: linear-gradient(90deg, #fafafa 38.77%, hsla(0, 0%, 100%, 0) 75%), url(../img/brand-img/monk.svg);
+        background-position: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .sports--live-in-peace p {
+        width: 40%;
+        align-self: flex-start;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .quote-card {
+        width: 45%;
+    }
+
+    .quote-card q {
+        font-size: 2rem;
+    }
+
+    .quote-card cite {
+        font-size: 1.25rem;
+    }
+
+    .logo-definition,
+    .brand-mascot {
+        flex-direction: row;
+        gap: 4em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .info-containers {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10em 8em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .quote-card {
+        width: 35%;
+    }
+
+    .quote-card q {
+        font-size: 3rem;
+    }
+
+    .quote-card cite {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
